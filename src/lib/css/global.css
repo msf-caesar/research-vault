@@ -19,7 +19,7 @@
 html,
 body {
     color: #111;
-    font-size: clamp(18px, 4vw, 20px);
+    font-size: clamp(20px, 4vw, 22px);
     font-family: 'Sylo', sans-serif;
 }
 
