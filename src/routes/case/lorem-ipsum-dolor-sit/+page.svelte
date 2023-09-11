@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import "$lib/css/global.css";
     import Link from "$lib/components/Link.svelte";
 </script>
@@ -53,75 +53,90 @@
 </div>
 
 <style>
+    /* Define styles for the page layout */
     .page-layout {
         padding: 0 20px;
         max-width: 1100px;
         margin: 80px auto;
-    }
-    .page-layout {
+        /* Set grid display with a gap */
         gap: 0 80px;
         display: grid;
     }
+
+    /* Styles for paragraphs */
     p {
         padding: 20px 0;
         line-height: 1.5;
     }
+
+    /* Styles for heading level 1 */
     h1 {
         font-family: "Zirlo", serif;
         font-size: 2rem;
     }
+
+    /* Styles for heading level 4 */
     h4 {
         padding-top: 20px;
         font-family: "Zirlo", serif;
         font-size: 1.1rem;
     }
+
+    /* Styles for heading level 6 (Subtitle) */
     h6 {
         font-family: "Zirlo", serif;
         font-size: 1rem;
-    }
-    h6 {
+        /* Add gradient background to subtitle text */
         color: transparent;
         background-clip: text;
         background-image: linear-gradient(to bottom left, #0b68cb, #113264);
     }
+
+    /* Styles for horizontal rule (divider) */
     hr {
         border: none;
         border-top: solid 1px #dddde4;
         margin-top: 40px;
     }
-    /* CSS Nesting Support Now https://caniuse.com/css-nesting */
-    hr {
-        &.subtle-divider {
-            width: 40px;
-            margin-bottom: 40px;
-        }
+
+    /* Styles for a subtle divider */
+    hr.subtle-divider {
+        width: 40px;
+        margin-bottom: 40px;
     }
+
+    /* Media query for screens with a minimum width of 880px */
     @media only screen and (min-width: 880px) {
+        /* Reset styles for .mobile-styles class */
         .mobile-styles {
             all: unset;
         }
+        /* Define grid layout for larger screens */
         .page-layout {
             grid-template-columns: 1fr 400px;
         }
+        /* Make .sticky-panel sticky */
         .sticky-panel {
             top: 40px;
             position: sticky;
         }
+        /* Position section element in the grid */
         section {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
         }
+        /* Position main element in the grid */
         main {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
         }
+        /* Position footer element in the grid */
         footer {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
-        }
-        footer {
             position: relative;
         }
+        /* Add scroll padding to body and html elements */
         :global(body, html) {
             scroll-padding-top: 40px;
         }
