@@ -1,7 +1,23 @@
 {
 	"name": "research-vault",
 	"version": "0.0.1",
-	"private": true,
+	"private": false,
+	"description": "A straightforward research project vault.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/msf-caesar/research-vault.git"
+	},
+	"bugs": {
+		"url": "https://github.com/msf-caesar/research-vault/issues"
+	},
+	"keywords": [
+		"academic",
+		"data",
+		"knowledge",
+		"research",
+		"storage",
+		"vault"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
