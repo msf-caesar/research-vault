@@ -15,7 +15,7 @@
     </section>
     <main>
         {#each Array(5) as _}
-            <h4 id="quibusdam">Repellendus quibusdam, odio, sed sapiente!</h4>
+            <h1 id="quibusdam">Repellendus quibusdam, odio, sed sapiente!</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
                 in necessitatibus amet suscipit at, numquam facilis unde odio
@@ -36,17 +36,17 @@
     <footer>
         <div class="sticky-panel">
             <hr class="subtle-divider mobile-styles" />
-            <h4>About us</h4>
+            <h1>About us</h1>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Fugiat, obcaecati consequuntur.
             </p>
-            <h4>Founded</h4>
+            <h1>Founded</h1>
             <p>Lorem city, 2020</p>
             <hr class="subtle-divider" />
-            <h4>Next case study</h4>
+            <h1>Next case study</h1>
             <p>
-                <Link href="/" external>Consectetur adipisicing</Link>
+                <Link href="/">Consectetur adipisicing</Link>
             </p>
         </div>
     </footer>
@@ -70,13 +70,14 @@
     }
 
     /* Styles for heading level 1 */
-    h1 {
+    section h1 {
         font-family: "Zirlo", serif;
         font-size: 2rem;
     }
 
-    /* Styles for heading level 4 */
-    h4 {
+    /* Styles for heading level 1 in main and footer */
+    main h1,
+    footer h1 {
         padding-top: 20px;
         font-family: "Zirlo", serif;
         font-size: 1.1rem;

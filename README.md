@@ -5,6 +5,10 @@ A straightforward research project vault.
 To get started, run the following command:
 
 ```shell
+# Install pnpm globally (if not already installed)
+npm install -g pnpm
+
+# Run development server
 pnpm run dev --host
 ```
 
