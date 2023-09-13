@@ -1,25 +1,18 @@
 /* Font definition */
 @font-face {
-    font-family: 'Zirlo';
-    src: local('Zirlo'), url('/font/zirlo-bold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-    font-style: bold;
-}
-
-@font-face {
     font-family: 'Sylo';
-    src: local('Sylo'), url('/font/sylo.woff') format('woff');
+    src: local('Sylo'), url('/font/sylo-regular.woff2') format('woff');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
+    font-stretch: normal
 }
 
 /* Base styles for HTML and body */
 html,
 body {
     color: #111;
-    font-size: clamp(18px, 4vw, 20px);
+    font-size: clamp(14px, 4vw, 16px);
     font-family: 'Sylo', sans-serif;
 }
 
@@ -34,7 +27,7 @@ body {
 /* Styles for hyperlinks */
 a {
     color: #111;
-    text-decoration-color: #b8b8b8;
+    text-decoration-color: #bebebe;
 }
 
 /* Styles for hyperlinks with target="_blank" attribute */

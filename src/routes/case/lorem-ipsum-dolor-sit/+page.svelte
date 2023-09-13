@@ -4,32 +4,30 @@
 </script>
 
 <svelte:head>
-    <title>Case study - Lorem ipsum dolor sit</title>
+    <title>
+        Case study - Development of a Resource Management System for the Oil
+        Industry
+    </title>
 </svelte:head>
 
 <div class="page-layout">
     <section>
         <h6>Case study</h6>
-        <h1>Lorem ipsum dolor sit</h1>
+        <h1>
+            Development of a Resource Management System for the Oil Industry
+        </h1>
         <hr />
     </section>
     <main>
-        {#each Array(5) as _}
-            <h1 id="quibusdam">Repellendus quibusdam, odio, sed sapiente!</h1>
+        {#each Array(10) as _}
+            <h1>Problem Statement</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-                in necessitatibus amet suscipit at, numquam facilis unde odio
-                porro dicta eius libero quae, esse soluta consectetur quis
-                tempore molestiae quo. Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Vitae explicabo ab quia pariatur eos unde id
-                inventore, soluta provident sint. Amet delectus enim optio
-                praesentium deserunt corrupti velit asperiores nihil.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                illo, mollitia ipsa nihil sequi <b>accusantium</b> quam maiores eum
-                cupiditate quidem neque eos voluptates itaque provident corrupti
-                nesciunt excepturi ut fuga!
+                Challenges in Personnel and Equipment Allocation: PetroEnergy
+                Corp. operates in multiple geographically dispersed oil fields,
+                making the allocation of personnel and equipment a significant
+                logistical challenge. The company needs to find an efficient way
+                to schedule and assign qualified workers and specific equipment
+                to corresponding tasks at each site.
             </p>
         {/each}
     </main>
@@ -38,15 +36,16 @@
             <hr class="subtle-divider mobile-styles" />
             <h1>About us</h1>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Fugiat, obcaecati consequuntur.
+                This case study focuses on the process of developing and
+                implementing a resource management system for a leading company
+                in the oil industry, named "PetroEnergy Corp."
             </p>
             <h1>Founded</h1>
-            <p>Lorem city, 2020</p>
+            <p>Ontario City in 2020</p>
             <hr class="subtle-divider" />
             <h1>Next case study</h1>
             <p>
-                <Link href="/">Consectetur adipisicing</Link>
+                <Link href="/">Tech Innovation in Retail</Link>
             </p>
         </div>
     </footer>
@@ -55,8 +54,8 @@
 <style>
     /* Define styles for the page layout */
     .page-layout {
-        padding: 0 20px;
-        max-width: 1100px;
+        padding: 0 40px;
+        max-width: 1000px;
         margin: 80px auto;
         /* Set grid display with a gap */
         gap: 0 80px;
@@ -65,28 +64,36 @@
 
     /* Styles for paragraphs */
     p {
+        color: #555;
+        padding: 10px 0;
+        line-height: 1.6;
+    }
+
+    /* Styles for the first paragraph in main if it doesn't contain an h1 element */
+    main:not(:has(h1)) > p:first-child {
         padding: 20px 0;
-        line-height: 1.5;
     }
 
     /* Styles for heading level 1 */
     section h1 {
-        font-family: "Zirlo", serif;
+        color: #111;
         font-size: 2rem;
+        font-weight: normal;
     }
 
     /* Styles for heading level 1 in main and footer */
     main h1,
     footer h1 {
+        color: #111;
         padding-top: 20px;
-        font-family: "Zirlo", serif;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        font-weight: normal;
     }
 
     /* Styles for heading level 6 (Subtitle) */
     h6 {
-        font-family: "Zirlo", serif;
         font-size: 1rem;
+        font-weight: normal;
         /* Add gradient background to subtitle text */
         color: transparent;
         background-clip: text;
@@ -114,7 +121,7 @@
         }
         /* Define grid layout for larger screens */
         .page-layout {
-            grid-template-columns: 1fr 400px;
+            grid-template-columns: 1fr 300px;
         }
         /* Make .sticky-panel sticky */
         .sticky-panel {
