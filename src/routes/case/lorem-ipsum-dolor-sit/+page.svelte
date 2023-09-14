@@ -10,7 +10,8 @@
     </title>
 </svelte:head>
 
-<div class="page">
+<div class="layout">
+    <!-- Static Section: Header (Contains fixed content) -->
     <section>
         <p>Case Study</p>
         <h1>
@@ -18,6 +19,8 @@
         </h1>
         <hr class="divider" />
     </section>
+
+    <!-- Static Section: Main Content (Contains repetitive content) -->
     <main>
         {#each Array(10) as _}
             <h1>Problem Statement</h1>
@@ -31,17 +34,24 @@
             </p>
         {/each}
     </main>
+
+    <!-- Static Section: Footer (Contains fixed content) -->
     <footer>
-        <div class="footer__sticky">
+        <div class="footer-sticky">
+            <!-- Important: Do not move the hr ☢️ -->
             <hr class="divider divider--subtle divider--mobile" />
+
             <h1>About</h1>
             <p>
-                This section study focuses on PetroEnergy Corp.'s resource
-                management system development in the oil industry.
+                This section focuses on the development of PetroEnergy Corp.'s
+                resource management system in the oil industry.
             </p>
+
             <h1>Founded</h1>
             <p>Ontario City in 2020</p>
+
             <hr class="divider divider--subtle" />
+
             <h1>Next</h1>
             <p>
                 <Link href="/" external>Tech Innovation in Retail</Link>
@@ -52,7 +62,7 @@
 
 <style>
     /* Define styles for the page layout */
-    .page {
+    .layout {
         gap: 0 80px;
         display: grid;
         /* Behavior */
@@ -131,13 +141,13 @@
             all: unset;
         }
 
-        /* Adjust page layout for larger screens */
-        .page {
+        /* Adjust layout layout for larger screens */
+        .layout {
             grid-template-columns: 1fr 300px; /* Two-column layout */
         }
 
         /* Sticky footer for larger screens */
-        .footer__sticky {
+        .footer-sticky {
             top: 40px;
             position: sticky;
         }
