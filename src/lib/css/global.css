@@ -12,7 +12,7 @@
 html,
 body {
     color: #111;
-    font-size: clamp(14px, 4vw, 16px);
+    font-size: clamp(12px, 4vw, 14px);
     font-family: 'Sylo', sans-serif;
 }
 
@@ -33,5 +33,5 @@ a {
 /* Styles for hyperlinks with target="_blank" attribute */
 a[target=_blank] {
     padding-right: 1em;
-    background: right 0 / 0.5em no-repeat url("data:image/svg+xml,%3Csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 .675v6.75a.675.675 0 01-1.35 0V2.303L1.153 8.8a.673.673 0 01-.955.002.675.675 0 010-.954L6.697 1.35H1.575a.674.674 0 110-1.35h6.75C8.7 0 9 .304 9 .675z' fill='%23111' fill-rule='nonzero'/%3E%3C/svg%3E");
+    background: right 0.25rem / 0.5em no-repeat url("data:image/svg+xml,%3Csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 .675v6.75a.675.675 0 01-1.35 0V2.303L1.153 8.8a.673.673 0 01-.955.002.675.675 0 010-.954L6.697 1.35H1.575a.674.674 0 110-1.35h6.75C8.7 0 9 .304 9 .675z' fill='%23111' fill-rule='nonzero'/%3E%3C/svg%3E");
 }
