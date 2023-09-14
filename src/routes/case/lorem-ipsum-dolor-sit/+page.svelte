@@ -98,7 +98,7 @@
     /* Styles for main text in the content */
     main p,
     footer p {
-        color: #555;
+        color: #777;
         line-height: 1.6;
         font-size: 1rem;
         font-weight: normal;

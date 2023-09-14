@@ -1,3 +1,6 @@
+Here's an improved version of your README with better English grammar and
+clarity:
+
 # Research Vault
 
 A straightforward research project vault.
@@ -12,7 +15,7 @@ To get started, run the following command:
 # Install pnpm globally (if not already installed)
 npm install -g pnpm
 
-# Run development server
+# Start the development server
 pnpm run dev --host
 ```
 
@@ -21,9 +24,13 @@ pnpm run dev --host
 Once the development server is running, you can test the project by accessing it
 through the following URLs:
 
-- Local Development:
-  [http://localhost:5173/case/lorem-ipsum-dolor-sit](http://localhost:5173/case/lorem-ipsum-dolor-sit)
+- Local Development: [http://localhost:5173/](http://localhost:5173/)
 - Live Deployment:
-  [https://research-vault.vercel.app/case/lorem-ipsum-dolor-sit](https://research-vault.vercel.app/case/lorem-ipsum-dolor-sit)
+  [https://research-vault.vercel.app/](https://research-vault.vercel.app/)
 
-Feel free to explore and use the research vault for your project needs.
+Feel free to explore and utilize the research vault for your project needs.
+
+# Design Style
+
+The CSS follows the BEM methodology and utilizes CSS nesting for unique cases
+using Svelte Class hash-based component-oriented styling.
