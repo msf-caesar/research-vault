@@ -1,23 +1,27 @@
 <script lang="ts">
     import "$lib/css/global.css";
     import Link from "$lib/components/Link.svelte";
+    import ShareLink from "$lib/components/ShareLink.svelte";
 </script>
 
 <svelte:head>
     <title>
-        Case study - Development of a Resource Management System for the Oil
+        Case Study - Development of a Resource Management System for the Oil
         Industry
     </title>
 </svelte:head>
 
-<div class="page-layout">
+<div class="layout">
+    <!-- Static Section: Header (Contains fixed content) -->
     <section>
-        <h6>Case study</h6>
+        <p>Case Study</p>
         <h1>
             Development of a Resource Management System for the Oil Industry
         </h1>
-        <hr />
+        <hr class="divider" />
     </section>
+
+    <!-- Static Section: Main Content (Contains repetitive content) -->
     <main>
         {#each Array(10) as _}
             <h1>Problem Statement</h1>
@@ -31,21 +35,38 @@
             </p>
         {/each}
     </main>
+
+    <!-- Static Section: Footer (Contains fixed content) -->
     <footer>
-        <div class="sticky-panel">
-            <hr class="subtle-divider mobile-styles" />
-            <h1>About us</h1>
+        <div class="footer-sticky">
+            <hr class="divider divider--subtle divider--mobile" />
+
+            <h1>About</h1>
             <p>
-                This case study focuses on the process of developing and
-                implementing a resource management system for a leading company
-                in the oil industry, named "PetroEnergy Corp."
+                This section focuses on the development of PetroEnergy Corp.'s
+                resource management system in the oil industry.
             </p>
+
             <h1>Founded</h1>
             <p>Ontario City in 2020</p>
-            <hr class="subtle-divider" />
+
+            <hr class="divider divider--subtle" />
+
             <h1>Next case study</h1>
+            <p><Link href="/">Tech Innovation in Retail</Link></p>
+
+            <hr class="divider divider--subtle" />
+            <p><Link href="/">Back to profile</Link></p>
             <p>
-                <Link href="/">Tech Innovation in Retail</Link>
+                <ShareLink
+                    data={{
+                        title: "MDN",
+                        text: "Learn web development on MDN!",
+                        url: "https://developer.mozilla.org",
+                    }}
+                >
+                    Share
+                </ShareLink>
             </p>
         </div>
     </footer>
@@ -53,100 +74,119 @@
 
 <style>
     /* Define styles for the page layout */
-    .page-layout {
+    .layout {
+        gap: 0 80px;
+        display: grid;
+        /* Behavior */
         padding: 0 40px;
         max-width: 1000px;
         margin: 80px auto;
-        /* Set grid display with a gap */
-        gap: 0 80px;
-        display: grid;
     }
 
-    /* Styles for paragraphs */
-    p {
-        color: #555;
-        padding: 10px 0;
+    /* Styles for headings and text */
+    main h1,
+    footer h1 {
+        color: #111;
         line-height: 1.6;
+        font-size: 1rem;
+        font-weight: normal;
+        /* Behavior */
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
-    /* Styles for the first paragraph in main if it doesn't contain an h1 element */
-    main:not(:has(h1)) > p:first-child {
-        padding: 20px 0;
+    /* Styles for main text in the content */
+    main p,
+    footer p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-weight: normal;
     }
 
-    /* Styles for heading level 1 */
+    /* Define spacing between text paragraphs */
+    main p:not(:last-child),
+    footer p:not(:last-child) {
+        /* Behavior */
+        margin-bottom: 10px;
+    }
+
+    /* Styles for the category label in the section */
+    section p {
+        line-height: 1.6;
+        font-size: 1rem;
+        font-weight: normal;
+        /* Gradient text color */
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to bottom left, #0b68cb, #113264);
+        /* Behavior */
+        margin-bottom: 10px;
+    }
+
+    /* Styles for heading level 1 in the section */
     section h1 {
         color: #111;
         font-size: 2rem;
         font-weight: normal;
     }
 
-    /* Styles for heading level 1 in main and footer */
-    main h1,
-    footer h1 {
-        color: #111;
-        padding-top: 20px;
-        font-size: 1rem;
-        font-weight: normal;
-    }
-
-    /* Styles for heading level 6 (Subtitle) */
-    h6 {
-        font-size: 1rem;
-        font-weight: normal;
-        /* Add gradient background to subtitle text */
-        color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(to bottom left, #0b68cb, #113264);
-    }
-
     /* Styles for horizontal rule (divider) */
-    hr {
+    .divider {
         border: none;
         border-top: solid 1px #dddde4;
+        /* Behavior */
         margin-top: 40px;
     }
 
     /* Styles for a subtle divider */
-    hr.subtle-divider {
+    .divider--subtle {
         width: 40px;
+        /* Behavior */
         margin-bottom: 40px;
     }
 
-    /* Media query for screens with a minimum width of 880px */
+    /* Media query for larger screens */
     @media only screen and (min-width: 880px) {
-        /* Reset styles for .mobile-styles class */
-        .mobile-styles {
+        /* Reset mobile-specific styles for the divider */
+        .divider--mobile {
             all: unset;
         }
-        /* Define grid layout for larger screens */
-        .page-layout {
-            grid-template-columns: 1fr 300px;
+
+        /* Adjust page layout for larger screens */
+        .layout {
+            grid-template-columns: 1fr 300px; /* Two-column layout */
         }
-        /* Make .sticky-panel sticky */
-        .sticky-panel {
+
+        /* Sticky footer for larger screens */
+        .footer-sticky {
             top: 40px;
             position: sticky;
         }
-        /* Position section element in the grid */
+
+        /* Grid positioning for section on larger screens */
         section {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
         }
-        /* Position main element in the grid */
+
+        /* Grid positioning for main content on larger screens */
         main {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
         }
-        /* Position footer element in the grid */
+
+        /* Grid positioning for footer on larger screens */
         footer {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
+            /* Behavior */
             position: relative;
         }
-        /* Add scroll padding to body and html elements */
-        :global(body, html) {
-            scroll-padding-top: 40px;
-        }
+    }
+
+    /* Add scroll padding to body and html elements */
+    :global(body, html) {
+        scroll-padding-top: 40px;
     }
 </style>
