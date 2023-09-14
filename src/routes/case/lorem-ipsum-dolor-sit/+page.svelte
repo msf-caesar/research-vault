@@ -5,35 +5,23 @@
 
 <svelte:head>
     <title>
-        Case study - Development of a Resource Management System for the Oil
+        Case Study - Development of a Resource Management System for the Oil
         Industry
     </title>
 </svelte:head>
 
 <div class="page">
-    <!-- Static section for section study information -->
-    <section class="section">
-        <!-- Category Information -->
-        <p class="section__category">Case Study</p>
-
-        <!-- Main Heading -->
-        <h1 class="section__title">
+    <section>
+        <p>Case Study</p>
+        <h1>
             Development of a Resource Management System for the Oil Industry
         </h1>
-
-        <!-- Horizontal Rule Divider -->
         <hr class="divider" />
     </section>
-
-    <!-- Dynamic main area -->
-    <main class="main">
-        <!-- Loop through an array of challenges -->
+    <main>
         {#each Array(10) as _}
-            <!-- Dynamic heading and paragraph for challenges -->
-            <h1 class="main__title">
-                Challenges in Personnel and Equipment Allocation
-            </h1>
-            <p class="main__text">
+            <h1>Problem Statement</h1>
+            <p>
                 Challenges in Personnel and Equipment Allocation: PetroEnergy
                 Corp. operates in multiple geographically dispersed oil fields,
                 making the allocation of personnel and equipment a significant
@@ -43,31 +31,20 @@
             </p>
         {/each}
     </main>
-
-    <!-- Dynamic footer with company information -->
-    <footer class="footer">
+    <footer>
         <div class="footer__sticky">
-            <!-- Horizontal Rule Divider -->
             <hr class="divider divider--subtle divider--mobile" />
-
-            <!-- About PetroEnergy Corp. -->
-            <h1 class="footer__title">About</h1>
-            <p class="footer__text">
+            <h1>About</h1>
+            <p>
                 This section study focuses on PetroEnergy Corp.'s resource
                 management system development in the oil industry.
             </p>
-
-            <!-- Company founding information -->
-            <h1 class="footer__title">Founded</h1>
-            <p class="footer__text">Ontario City in 2020</p>
-
-            <!-- Horizontal Rule Divider -->
+            <h1>Founded</h1>
+            <p>Ontario City in 2020</p>
             <hr class="divider divider--subtle" />
-
-            <!-- Next section study link -->
-            <h1 class="footer__title">Next</h1>
-            <p class="footer__text">
-                <Link href="/">Tech Innovation in Retail</Link>
+            <h1>Next</h1>
+            <p>
+                <Link href="/" external>Tech Innovation in Retail</Link>
             </p>
         </div>
     </footer>
@@ -85,8 +62,8 @@
     }
 
     /* Styles for headings and text */
-    .main__title,
-    .footer__title {
+    main h1,
+    footer h1 {
         color: #111;
         line-height: 1.6;
         font-size: 1rem;
@@ -97,8 +74,8 @@
     }
 
     /* Styles for main text in the content */
-    .main__text,
-    .footer__text {
+    main p,
+    footer p {
         color: #555;
         line-height: 1.6;
         font-size: 1rem;
@@ -106,14 +83,14 @@
     }
 
     /* Define spacing between text paragraphs */
-    .main__text:not(:last-child),
-    .footer__text:not(:last-child) {
+    main p:not(:last-child),
+    footer p:not(:last-child) {
         /* Behavior */
         margin-bottom: 10px;
     }
 
     /* Styles for the category label in the section */
-    .section__category {
+    section p {
         line-height: 1.6;
         font-size: 1rem;
         font-weight: normal;
@@ -126,7 +103,7 @@
     }
 
     /* Styles for heading level 1 in the section */
-    .section__title {
+    section h1 {
         color: #111;
         font-size: 2rem;
         font-weight: normal;
@@ -153,27 +130,32 @@
         .divider--mobile {
             all: unset;
         }
+
         /* Adjust page layout for larger screens */
         .page {
             grid-template-columns: 1fr 300px; /* Two-column layout */
         }
+
         /* Sticky footer for larger screens */
         .footer__sticky {
             top: 40px;
             position: sticky;
         }
+
         /* Grid positioning for section on larger screens */
-        .section {
+        section {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
         }
+
         /* Grid positioning for main content on larger screens */
-        .main {
+        main {
             grid-column: 1 / 2;
             grid-row: 2 / 3;
         }
+
         /* Grid positioning for footer on larger screens */
-        .footer {
+        footer {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
             /* Behavior */
