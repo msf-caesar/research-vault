@@ -27,7 +27,7 @@ through the following URLs:
 
 Feel free to explore and utilize the research vault for your project needs.
 
-# Design Style
+## Design Style
 
 The CSS follows the BEM methodology and utilizes CSS nesting for unique cases
 using Svelte Class hash-based component-oriented styling.
