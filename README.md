@@ -1,6 +1,3 @@
-Here's an improved version of your README with better English grammar and
-clarity:
-
 # Research Vault
 
 A straightforward research project vault.
