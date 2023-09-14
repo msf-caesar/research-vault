@@ -1,6 +1,7 @@
 <script lang="ts">
     import "$lib/css/global.css";
     import Link from "$lib/components/Link.svelte";
+    import ShareLink from "$lib/components/ShareLink.svelte";
 </script>
 
 <svelte:head>
@@ -38,7 +39,6 @@
     <!-- Static Section: Footer (Contains fixed content) -->
     <footer>
         <div class="footer-sticky">
-            <!-- Important: Do not move the hr ☢️ -->
             <hr class="divider divider--subtle divider--mobile" />
 
             <h1>About</h1>
@@ -52,9 +52,21 @@
 
             <hr class="divider divider--subtle" />
 
-            <h1>Next</h1>
+            <h1>Next case study</h1>
+            <p><Link href="/">Tech Innovation in Retail</Link></p>
+
+            <hr class="divider divider--subtle" />
+            <p><Link href="/">Back to profile</Link></p>
             <p>
-                <Link href="/" external>Tech Innovation in Retail</Link>
+                <ShareLink
+                    data={{
+                        title: "MDN",
+                        text: "Learn web development on MDN!",
+                        url: "https://developer.mozilla.org",
+                    }}
+                >
+                    Share
+                </ShareLink>
             </p>
         </div>
     </footer>
@@ -141,7 +153,7 @@
             all: unset;
         }
 
-        /* Adjust layout layout for larger screens */
+        /* Adjust page layout for larger screens */
         .layout {
             grid-template-columns: 1fr 300px; /* Two-column layout */
         }
