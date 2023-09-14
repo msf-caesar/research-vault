@@ -140,7 +140,7 @@
 
     /* Styles for the figure caption paragraph */
     figure figcaption p {
-        color: #777;
+        color: #666;
         line-height: 1.6;
         font-size: 1rem;
         font-weight: normal;
@@ -177,7 +177,7 @@
 
     /* Styles for section paragraphs in the main section */
     main section p {
-        color: #777;
+        color: #666;
         line-height: 1.6;
         font-size: 1rem;
         font-weight: normal;
@@ -191,7 +191,7 @@
 
     /* Styles for table header within the main section */
     main section table th h1 {
-        color: #777;
+        color: #666;
     }
 
     /* Styles for table headers in the main section */
